@@ -25,7 +25,7 @@ async def on_ready():
 @client.event
 async def on_command_error(ctx, error):
     return
-
+#test
 def main():
     client.run(TOKEN)
 
