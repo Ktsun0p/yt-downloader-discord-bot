@@ -1,4 +1,4 @@
-# youtube-to-mp3-Discord-Bot
+# youtube-downloader-Discord-Bot
 ## Setting up the bot
     1. Add your bot's token to the .env file.
     2. Run the file called start.cmd

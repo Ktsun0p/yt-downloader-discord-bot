@@ -3,16 +3,20 @@ import os
 import shutil
 from .check import get_file_size, check_video_length
 
-async def download_audio(url:str,user:int):
-    mp3_link = url
-    audio = YouTube(mp3_link)
+async def download_video(video_link:str,user:int,type:str):
 
-    await check_video_length(audio.length)
+    video = YouTube(video_link)
+
+    await check_video_length(video.length)
 
     try:
-        output = audio.streams.get_audio_only().download()
+        if type == "mp3": 
+            output = video.streams.get_audio_only().download()
+        else:
+            output = video.streams.get_highest_resolution().download()
+
         base, ext = os.path.splitext(output)
-        new_file = base+".mp3"
+        new_file = base+f".{type}"
         os.rename(output,new_file)
 
         # Create a folder with the USER ID as name inside the folder "files"
@@ -29,3 +33,4 @@ async def download_audio(url:str,user:int):
         return user_file_path
     except Exception as e:
           raise ValueError(e)  
+
