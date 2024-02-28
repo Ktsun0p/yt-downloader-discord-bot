@@ -1,6 +1,6 @@
 # youtube-to-mp3-Discord-Bot
 ## Setting up the bot
-    1. Change the DISCORD_TOKEN in the .env file for your bot's token
+    1. Add your bot's token to the .env file.
     2. Run the file called start.cmd
   After this the bot should be running properly.
 ## Using it on Discord.
