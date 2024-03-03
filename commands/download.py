@@ -6,7 +6,7 @@ import os
 from urllib.parse import urlparse
 
 @app_commands.describe(url="The link of the video to download.")
-@app_commands.describe(type="The link of the video to download.")
+@app_commands.describe(type="The type of the content to download (Video/Audio).")
 @app_commands.choices(type=[
      app_commands.Choice(name="MP4 (Video)", value="mp4"),
      app_commands.Choice(name="MP3 (Audio)", value="mp3")
