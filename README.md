@@ -2,7 +2,7 @@
 ## Setting up the bot
     1. Add your bot's token to the .env file.
     2. Run the file called setup.cmd, this will install all the dependencies. After this, the file should delete itself. If not, delete it manually 
-    2. Open the file called run.cmd
+    3. Open the file called run.cmd
   After this, the bot should be running properly.
 ## Using it on Discord.
 After inviting your bot to your discord server, you should be able to use the `/download` command. Make sure your bot has `administrator` and `applications.commands` permissions.
